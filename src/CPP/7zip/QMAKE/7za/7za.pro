@@ -249,3 +249,5 @@ SOURCES +=  \
 
 macx: LIBS += -framework CoreFoundation
 
+target.path = /usr/libexec/p7zip
+INSTALLS += target
