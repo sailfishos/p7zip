@@ -18,3 +18,8 @@ Lzham.target = sub-Lzham
 
 7z_.depends = sub-Format7zFree sub-Lzham
 
+scripts.files = scripts/*
+scripts.path = /usr/bin
+
+INSTALLS += scripts
+
