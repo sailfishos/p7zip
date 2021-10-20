@@ -4,7 +4,7 @@ Summary: 7-zip file archiver (7zr)
 Version: 16.02
 Release: 1
 Group: Applications/Archiving
-License: LGPLv2.1
+License: LGPLv2+
 Source0: %{name}-%{version}.tar.bz2
 BuildRequires: pkgconfig(Qt5Core)
 
