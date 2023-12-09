@@ -14,14 +14,14 @@ UString MyFormatMessage(DWORD errorCode)
   AString msg;
 
   switch(errorCode) {
-    case ERROR_NO_MORE_FILES   : txt = "No more files"; break ;
-    case E_NOTIMPL             : txt = "E_NOTIMPL"; break ;
-    case E_NOINTERFACE         : txt = "E_NOINTERFACE"; break ;
-    case E_ABORT               : txt = "E_ABORT"; break ;
-    case E_FAIL                : txt = "E_FAIL"; break ;
-    case STG_E_INVALIDFUNCTION : txt = "STG_E_INVALIDFUNCTION"; break ;
-    case E_OUTOFMEMORY         : txt = "E_OUTOFMEMORY"; break ;
-    case E_INVALIDARG          : txt = "E_INVALIDARG"; break ;
+    case unsigned (ERROR_NO_MORE_FILES)   : txt = "No more files"; break ;
+    case unsigned (E_NOTIMPL)             : txt = "E_NOTIMPL"; break ;
+    case unsigned (E_NOINTERFACE)         : txt = "E_NOINTERFACE"; break ;
+    case unsigned (E_ABORT)               : txt = "E_ABORT"; break ;
+    case unsigned (E_FAIL)                : txt = "E_FAIL"; break ;
+    case unsigned (STG_E_INVALIDFUNCTION) : txt = "STG_E_INVALIDFUNCTION"; break ;
+    case unsigned (E_OUTOFMEMORY)         : txt = "E_OUTOFMEMORY"; break ;
+    case unsigned (E_INVALIDARG)          : txt = "E_INVALIDARG"; break ;
     case ERROR_DIRECTORY          : txt = "Error Directory"; break ;
     default:
       txt = strerror(errorCode);
