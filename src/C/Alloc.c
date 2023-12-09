@@ -58,12 +58,18 @@ void align_free(void * ptr)
 #else
 void *align_alloc(size_t size)
 {
-    return malloc(size);
+    void * p = malloc(size);
+    if(!p){
+        printf("Out of memory: can't allocate %u bytes\n",size);
+	abort();
+    }
+    return p;
 }
 
 void align_free(void * ptr)
 {
-  free(ptr);
+   if(!ptr) return;
+   free(ptr);
 }
 
 #endif

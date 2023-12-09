@@ -163,7 +163,8 @@ struct CItem
       return false;
     }
     const Byte *data = (const Byte *)(Extensions[index].Data);
-    value = GetUi32(data);
+    if (!data) value = 0;
+    else value = GetUi32(data);
     return true;
   }
 
